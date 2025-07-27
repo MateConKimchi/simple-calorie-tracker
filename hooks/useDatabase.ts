@@ -176,7 +176,7 @@ export const useDatabase = () => {
 		[db]
 	)
 
-	const fetchDiaryEntries = useCallback(
+	const fetchDiaryEntries = useCallback( // db에서 한날짜에있는 모든 음식데이터들을 추출해줌
 		async (date: Date) => {
 			if (!db) throw dbNotInitializedError
 			const dateString = toISODateString(date)
